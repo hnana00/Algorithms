@@ -1,5 +1,5 @@
 package com.hanna.basic1;
-
+//4개의 정수값 중 최대값 출력
 public class MaximumValueOfFourValues {
 
 	static int max4(int a,int b,int c,int d) {
