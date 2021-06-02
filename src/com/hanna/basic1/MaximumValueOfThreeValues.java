@@ -1,8 +1,22 @@
 package com.hanna.basic1;
+import java.util.Scanner;
+//3개의 정수값 중 최대값 구하기
 
 public class MaximumValueOfThreeValues {
 
 	public static void main(String[] args) {
-		System.out.println("Maximum value of three values");
+		Scanner stdIn = new Scanner(System.in);
+		
+		
+		System.out.println("세 장수의 최대값을 구합니다.");
+		System.out.println("a의 값 : "); int a = stdIn.nextInt();
+		System.out.println("b의 값 : "); int b = stdIn.nextInt();
+		System.out.println("c의 값 : "); int c = stdIn.nextInt();
+		int max =a;
+		if(b>max) max=b;
+		if(c>max) max=c;
+		
+		System.out.println("최대값은" + max + "입니다.");
+		
 	}
 }
