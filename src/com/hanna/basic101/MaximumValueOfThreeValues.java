@@ -1,4 +1,4 @@
-package com.hanna.basic1;
+package com.hanna.basic101;
 import java.util.Scanner;
 //3개의 정수값 중 최대값 구하기
 

@@ -1,7 +1,9 @@
-package com.hanna.basic1;
+package com.hanna.basic101;
 
 public class MedianOfThreeNumbers2 {
 
+	/* 세 값의 대소 관계 13종류 모든 조합에 대한 중앙값 출력 */
+	
 	static int med3( int a, int b, int c ) {
 		
 		if( a >= b )

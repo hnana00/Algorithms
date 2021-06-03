@@ -1,4 +1,4 @@
-package com.hanna.basic1;
+package com.hanna.basic101;
 
 
 public class MaximumValueOfFourValues {
