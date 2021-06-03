@@ -16,6 +16,7 @@ public class Digits {
 		int a;
 		
 		do {
+			
 			System.out.println("a : ");
 			a = stdin.nextInt();
 			
@@ -24,6 +25,7 @@ public class Digits {
 		int num = 0;
 		
 		while ( a > 0 ) {
+			
 			a /= 10;
 			num++;
 		}
