@@ -1,47 +1,48 @@
-package com.hanna.basic201;
+package com.hanna.basic202;
 import java.util.Scanner;
 
+// 클래스
 public class PhysicalExamination {
 
 	static final int VMAX= 21;
 	
-	static class physcDate {
-		
-		String name;      //이름
-		int height;       //키
-		double vision;    //시력
-	
-	physcDate( String name, int height, double vision ){  //생성자
-		
-		this.name = name;
-		this.height = height;
-		this.vision = vision;
-		
-	}
-}
-	
-	static double aveheight( physcDate[] dat ) {  //키의 평균
+	// 메소드
+	// 키의 평균
+	static double aveheight( physcDate[] dat ) {  
 		
 		double sum = 0;
 		
-		for( int i = 0; i < dat.length; i++ )
-			
+		for( int i = 0; i < dat.length; i++ ) {
 			sum += dat[i].height;
+		}
 		
 		return sum / dat.length;
 	}
 	
-	static void distvision( physcDate[] dat, int[] dist ) {  //시력 분포
-		
+
+	// 메소드
+	//시력 분포
+	static void distvision( physcDate[] dat, int[] dist ) {  
+		System.out.println("====================");
+		System.out.println("====================");
+		System.out.println("====================");
 		int i = 0;
 		dist[i] = 0;
 		
-		for( i = 0; i < dat.length; i++ )
+		for( i = 0; i < dat.length; i++ ) {
 			
-			if( dat[i].vision >= 0.0 && dat[i].vision <= VMAX / 10.0 )
-				dist[(int)(dat[i].vision * 10)]++;  //??
+			if( dat[i].vision >= 0.0 && dat[i].vision <= VMAX / 10.0 ) {
+				
+				System.out.println((int) (dat[i].vision * 10));
+				dist[(int) (dat[i].vision * 10)]++;
+			}					
+		}			
+		System.out.println("====================");
+		System.out.println("====================");
+		System.out.println("====================");
 	}
 	
+	// main
 	public static void main(String[] args) {
 
 		//Scanner stdIn new Scanner(System.in);
@@ -49,6 +50,8 @@ public class PhysicalExamination {
 		physcDate[] x = {
 				
 			new physcDate("박현규", 162, 0.3),
+			new physcDate("함진아", 173, 0.7),
+			new physcDate("함진아", 173, 0.7),
 			new physcDate("함진아", 173, 0.7),
 			new physcDate("최윤미", 175, 2.0),
 			new physcDate("홍연의", 172, 1.5),
@@ -79,9 +82,9 @@ public class PhysicalExamination {
 			
 			System.out.printf("%3.1f ~ :", i / 10.0);
 			
-			for( int j = 0; j < vdist[i]; j++ ) 
-				
-				System.out.print('*');
+			for( int j = 0; j < vdist[i]; j++ ) {
+				System.out.print('*');				
+			}
 					
 			System.out.println();
 		}

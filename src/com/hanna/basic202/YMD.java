@@ -1,4 +1,4 @@
-package com.hanna.basic201;
+package com.hanna.basic202;
 import java.util.Scanner;
 
 class YMD {

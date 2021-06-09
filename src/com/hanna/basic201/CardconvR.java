@@ -14,7 +14,7 @@ public class CardconvR {
 			System.out.println(cd +"|" + "   " + no + "  ..." + no % cd) ;
 			System.out.println(" +----------") ;
 			
-			
+			 
 			cno[dno++] = dchar.charAt(no % cd);
 			no /= cd ;
 			// rÀ» x¶û ³ª´«°ªÀ» ³ÖÀ½
