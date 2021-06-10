@@ -13,6 +13,7 @@ public class BinSearch2 {
 		for( int i = 0; i < n; i++ )
 			System.out.printf("%4d",i);
 		
+		
 		System.out.println();
 		System.out.println("---+------------------------------");
 		
@@ -52,6 +53,7 @@ public class BinSearch2 {
 			//검색 결과를 앞쪽으로 좁힘
 			else
 				e = m - 1;
+			
 			
 		}while ( s <= e );
 

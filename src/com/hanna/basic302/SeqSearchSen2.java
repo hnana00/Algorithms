@@ -41,19 +41,22 @@ public class SeqSearchSen2 {
 
 	public static void main(String[] args) {
 
+		 
 		Scanner stdin = new Scanner(System.in);
 		
+		// 입략 받은 길이만큼 배열을 생성한다.
 		System.out.println("요솟수 : ");
 		int num = stdin.nextInt();
 		int[] x = new int[num];
 	
-		
+		// 값을 배열의 길이만큼 받는다.
 		for( int i = 0; i < num; i++ ) {
 			
 			System.out.print("x[" + i + "] : ");
 			x[i] = stdin.nextInt();
 		}
 		
+		// 검색할 값을 입력 받는다.
 		System.out.println("검색할 값 : ");
 		int ky = stdin.nextInt();
 		
