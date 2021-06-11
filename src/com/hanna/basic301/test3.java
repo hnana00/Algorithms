@@ -1,20 +1,21 @@
 package com.hanna.basic301;
+ 
+// È£¶ûÀÌ
+public class test3 implements test {
 
-/*
- * Ãß»ó Å¬·¡½º
- */
-abstract public class test3 {
-	
-	// Ãß½Ì ¸Þ¼Òµå
-	 abstract public void abc() ;
-	
-	 public void abc123() {
-		 System.out.println("¸Û¸Û");
+	@Override
+	public void running() {
+		System.out.print("¸Ö~~~¸®");
 	}
-	 
-	 
+
+	@Override
+	public void eat() {
+		System.out.print("»ç½¿");
+		
+	}
+
+	@Override
+	public int sleepTime() { 
+		return 120;
+	}
 }
-
-
-
-

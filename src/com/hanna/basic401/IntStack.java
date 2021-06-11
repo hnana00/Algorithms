@@ -54,7 +54,6 @@ public class IntStack {
 			if( ptr <= 0 )
 				throw new EmptyIntStackException();
 			return stk[--ptr];
-			
 		}
 		
 		//스택에서 테이터를 피크(정상 테이터 들여다봄)
@@ -69,6 +68,7 @@ public class IntStack {
 		
 		//스택에서 x를찾아 인덱스 반환
 		public int indexOf (int x) {
+			
 			for (int i = ptr-1; i >= 0; i--) {
 				if(stk[i] == x) {
 					return i;
@@ -104,6 +104,7 @@ public class IntStack {
 		
 		//스택 안의 모든 데이터를 바닥부터 순서대로 출력
 		public void dump() {
+			
 			if (this.ptr <= 0) {
 				System.out.println("스택이 비어 있습니다.");
 			}else {

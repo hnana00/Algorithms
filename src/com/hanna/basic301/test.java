@@ -1,24 +1,14 @@
 package com.hanna.basic301;
 
-public class test extends test2 {
+//  동물
+interface test {
 
- 
-	 
-	 public static void main(String[] args) {
+	// 뛰다
+	void running();
 	
-		 test t = new test();
-		 t.abc123();
-		 
-	}
-
-	@Override
-	public void abc() {
-		// TODO Auto-generated method stub
-		
-	}
- 
+	// 먹다
+	void eat();
+	
+	// 자다 - 자는시간 반환
+	int sleepTime();
 }
-
-
-
-
