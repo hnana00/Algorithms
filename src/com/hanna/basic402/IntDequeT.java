@@ -32,13 +32,14 @@ public class IntDequeT {
 				break;
 				
 			case 3:
-				x = s.dequeFront();
-				System.out.println("디큐한 값은?" + x);
+				// = s.dequeFront();
+				System.out.println(s.dequeFront());
 				break;
+				
 			case 4:
 				s.dequeRear();
 				break;
-				
+		
 			case 5:
 				s.dump();
 				break;
