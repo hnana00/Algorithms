@@ -15,19 +15,25 @@ public class BubbleSort {
 	//오른쪽부터 시작
 	static void bubblesort( int[] a, int n ) {
 		
-		for( int i = 0; i < n - 1; i++ )
+		int e = 0;
+		for( int i = 0; i < n - 1; i++ ) {
 			for( int j = n - 1; j > i; j-- )
-				if( a[j - 1] > a[j] )
+				if( a[j - 1] > a[j] ) {
 					swap( a, j - 1, j );
-					
+					e++;
+			}
+			if( e == 0 )
+				break;
+		}
+		System.out.println("=========" + e);
 	}
 	
 	//왼쪽부터 시작
 	static void bubblesort1( int[] a, int n ) {
 		
-		for( int i = 0; i < 7; i++ )
-			for( int j = 1; j < 7; j++ )
-				if( a[j-1] > a[j] )
+		for( int i = n - 1; i > 0; i-- )
+			for( int j = 0; j < i; j++ )
+				if( a[j] > a[j+1] )
 					swap( a, j-1, j );
 	}
 	
