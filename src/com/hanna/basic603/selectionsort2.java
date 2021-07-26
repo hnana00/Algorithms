@@ -1,4 +1,4 @@
-package com.hanna.basic602;
+package com.hanna.basic603;
 import java.util.Scanner;
 
 public class selectionsort2 {
