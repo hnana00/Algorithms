@@ -1,4 +1,4 @@
-package com.hanna.basic401;
+package com.hanna.basic605;
 
 public class IntStack {
 

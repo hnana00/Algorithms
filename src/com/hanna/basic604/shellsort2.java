@@ -1,14 +1,18 @@
 package com.hanna.basic604;
 
-public class ShellSort {
+public class shellsort2 {
 
 	static void shellsort( int[] a, int n ) {
 		
+		int h;
 		int count = 0; //ÀÌµ¿È½¼ö
 		
-		for( int h = n / 2; h > 0; h /= 2 ) 
+		for( h = 1; h < n /9; h = h * 3 + 1 ) 
+			;
+		
+		for( ; h > 0; h /= 3 ) {
 			for( int i = h; i < n; i++ ) {
-				
+			
 				int j;
 				int tmp = a[i];
 				
@@ -19,12 +23,13 @@ public class ShellSort {
 				a[j + h] = tmp;
 				count++;
 			}
+		}
 		System.out.println("¿ä¼ÒÀÇ ¿Å±èÈ½¼ö´Â " + count + "È¸ÀÔ´Ï´Ù.");
 	}
 	
 	public static void main(String[] args) {
 
-		System.out.println("¼¿ Á¤·Ä(¹öÀü 1)");
+		System.out.println("¼¿ Á¤·Ä(¹öÀü 2)");
 		
 		int n = 7;
 		int[] a = {22,5,11,32,120,68,70};

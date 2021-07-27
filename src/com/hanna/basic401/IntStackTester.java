@@ -1,6 +1,8 @@
 package com.hanna.basic401;
 import java.util.Scanner;
 
+import com.hanna.basic605.IntStack;
+
 
 public class IntStackTester {
 
