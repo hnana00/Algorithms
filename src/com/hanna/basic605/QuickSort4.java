@@ -1,10 +1,11 @@
 package com.hanna.basic605;
+
 import java.util.Scanner;
 
-public class QuickSort2 {
+public class QuickSort4 {
 
 	/*
-	 * 퀵 정렬(비재귀)
+	 * 퀵 정렬(비재귀) 요소 개수가 적은 그룹 먼저 나누는 메서드
 	 */
 	static void swap( int[] a, int idx1, int idx2 ) {
 		
@@ -39,6 +40,16 @@ public class QuickSort2 {
 					swap( a, pl++, pr-- );
 				
 			} while( pl <= pr );
+			
+			if (pr - left < right - pl) {
+				int temp;
+				temp = left;
+				left = pl;
+				pl = temp;
+				temp = right;
+				right = pr;
+				pr = temp;
+			}
 			
 			if( left < pr ) {
 				
@@ -90,4 +101,3 @@ public class QuickSort2 {
 			System.out.println("a[" + i + "]" + a[i]);
 	}
 }
-
