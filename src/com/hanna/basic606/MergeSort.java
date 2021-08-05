@@ -18,7 +18,7 @@ public class MergeSort {
 			__mergeSort( a , left, center );
 			__mergeSort( a, center + 1, right );
 			
-			for( i = left; i <= center; i++ )
+			for( i = left; i <= center; i++ ) 
 				buff[p++] = a[i];
 			
 			while( i <= right && j < p )
