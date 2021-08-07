@@ -2,6 +2,9 @@ package com.hanna.basic607;
 
 public class HeaSort {
 
+	/*
+	 * 힙 정렬
+	 */
 	static void swap( int[] a, int idx1, int idx2 ) {
 		
 		int t = a[idx1];
@@ -11,16 +14,16 @@ public class HeaSort {
 	
 	static void downHeap( int[] a , int left, int right ) {
 		
-		int temp = a[left];
-		int child;
-		int parent;
+		int temp = a[left]; //루트
+		int child; //큰 값을 가진 노드
+		int parent; //부모
 		
 		for( parent = left; parent < (right + 1) / 2; parent = child ) {
-			int cl = parent * 2 + 1;
-			int cr = cl + 1;
+			int cl = parent * 2 + 1; //왼쪽 자식
+			int cr = cl + 1; //오른쪽 자식
 			
-			child = (cr <= right && a[cr] > a[cl]) ? cr : cl;
-			
+			child = (cr <= right && a[cr] > a[cl]) ? cr : cl; //큰 값을 가진 노드를 자식에 대입
+		
 			if( temp >= a[child] )
 				break;
 			a[parent] = a[child];
@@ -30,13 +33,14 @@ public class HeaSort {
 
 	static void heaSort( int[] a, int n ) {
 		
-		for( int i = (n -1) / 2; i >= 0; i-- )
+		
+		for( int i = (n -1) / 2; i >= 0; i-- )  //힙으로 만들기
 			downHeap( a, i, n - 1 );
 		
 		for( int i = n - 1; i > 0; i-- ) {
 			
-			swap( a, 0, i );
-			downHeap( a, 0, i - 1 );
+			swap( a, 0, i ); //가장 큰 요소와 아직 정렬되지 않은 부분의 마지막요소를 고환
+			downHeap( a, 0, i - 1 ); //힙으로 만들기
 		}
 	}
 	
